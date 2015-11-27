@@ -11,7 +11,7 @@ Group:				Amusements/Games
 # following commands to generate the tarball:
 #  wget https://github.com/vcmi/vcmi/archive/0.98.tar.gz
 #  tar -xzf 0.98.tar.gz vcmi-0.98-1
-Source:				vcmi-0.98.tar.gz
+Source:				vcmi-0.98-1.tar.gz
 
 URL:				http://forum.vcmi.eu/portal.php
 
@@ -38,10 +38,10 @@ BuildRequires:		qt5-qtbase-devel
 VCMI is an open-source project aiming to reimplement HoMM3 game engine, giving it new and extended possibilities.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{version}-1
 
 %build
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=/usr ./
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr ./
 make %{?_smp_mflags}
 
 %install
@@ -61,10 +61,10 @@ make DESTDIR=%{buildroot} install
 %{_datadir}/icons/*
 
 %changelog
-* Wed Apr 01 2015 VCMI - 0.98
+* Wed Apr 01 2015 VCMI - 0.98-1
 - New upstream release
 
-* Sun Nov 02 2014 VCMI - 0.97
+* Sun Nov 02 2014 VCMI - 0.97-1
 - New upstream release
 
 * Tue Jul 01 2014 VCMI - 0.96-1
@@ -96,3 +96,4 @@ make DESTDIR=%{buildroot} install
 
 * Fri Jun 08 2012 VCMI - 0.89-1
 - Initial version
+
