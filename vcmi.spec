@@ -1,7 +1,7 @@
 Summary:			VCMI is an open-source project aiming to reimplement HoMM3 game engine, giving it new and extended possibilities.
 Name:				vcmi
-Version:			0.98
-Release:			2%{?dist}
+Version:			0.99
+Release:			1%{?dist}
 License:			GPLv2+
 Group:				Amusements/Games
 
@@ -11,7 +11,7 @@ Group:				Amusements/Games
 # following commands to generate the tarball:
 #  wget https://github.com/vcmi/vcmi/archive/0.98.tar.gz
 #  tar -xzf 0.98.tar.gz vcmi-0.98-1
-Source:				vcmi-0.98-2.tar.gz
+Source:				vcmi-0.99.tar.gz
 
 URL:				http://forum.vcmi.eu/portal.php
 
@@ -38,7 +38,7 @@ BuildRequires:		qt5-qtbase-devel
 VCMI is an open-source project aiming to reimplement HoMM3 game engine, giving it new and extended possibilities.
 
 %prep
-%setup -q -n %{name}-%{version}-2
+%setup -q -n %{name}-%{version}
 
 %build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr ./
