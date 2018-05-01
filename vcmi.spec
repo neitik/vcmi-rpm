@@ -37,6 +37,8 @@ BuildRequires:		qt5-qtbase-devel
 %description
 VCMI is an open-source project aiming to reimplement HoMM3 game engine, giving it new and extended possibilities.
 
+%global debug_package %{nil}
+
 %prep
 %setup -q -n %{name}-%{version}
 
